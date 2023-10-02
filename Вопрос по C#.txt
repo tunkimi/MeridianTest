@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Program
+{
+	public static void Main()
+	{
+			var teachers = new List<Teacher>(); // Заполнить из файла Учетиля.txt
+			var students = new List<Student>(); // Заполнить из файла Ученики.txt
+			var exams = new List<Exams>();
+
+			//1. Найти учителя у которого в классе меньше всего учеников 
+			//2. Найти средний бал экзамена по Физики за 2023 год.		
+			//3. Получить количество учиников которые по экзамену Математики получили больше 90 баллов, где учитель Alex 
+					
+
+	}
+	
+		public class Person
+		{
+			public long ID { get; set; }
+			public string Name { get; set; }
+			public string LastName { get; set; }
+			public int Age { get; set; }
+		}
+
+		public class Teacher : Person
+		{
+			public LessonType Lesson { get; set; } 
+		}
+
+		public class Student : Person
+		{
+			 
+		}
+
+		public class Exams
+		{
+			public LessonType Lesson { get; set; }
+
+			public long StudentId { get; set; }
+			public long TeacherId { get; set; } 
+
+			public decimal Score { get; set; }
+			public DateTime ExamDate { get; set; }
+
+			public Student Student { get; set; }
+			public Teacher Teacher { get; set; }
+		}
+
+		public enum LessonType
+		{
+			Mathematics = 1,
+			Physics = 2
+		}
+}

@@ -1,0 +1,89 @@
+Таблица 1
+Teachers (ID, Name, Age)
+
+Таблица 2
+Students (ID, Name, TeacherID)
+
+Таблица 3
+Lessons (ID, Name)
+
+Таблица 4
+Exams (StudentID, LessonID, Date, Score)
+
+1.  Сколько учеников у каждого учителя. Сортировать по количеству учеников 
+от меньшего
+
+2.  Найти ученика, у которого максимальный бал по Математике с 01.01.2021 
+по 01.01.2022, не брать учителей, у которых возраст старше 40.
+
+
+1) 
+SELECT (SELECT Teachers.Name FROM Teachers WHERE s.TeacherID=Teachers.ID) as "Учитель", 
+		COUNT(s.ID) AS "Число Учеников" 
+FROM Students AS s
+GROUP BY s.TeacherID
+ORDER BY COUNT(s.ID)
+
+
+2)
+SELECT * FROM Students
+WHERE
+
+Students.ID = (SELECT TOP(1) StudentID FROM
+
+(SELECT Exams.* FROM Exams,
+
+	(SELECT a.ID FROM
+
+		(SELECT s.ID FROM Students AS s
+		WHERE (SELECT t.Age FROM Teachers AS t WHERE t.ID=s.TeacherID)<=40) 
+		AS a
+
+		INNER JOIN 
+
+		(SELECT e.StudentId AS ID FROM Exams AS e
+		WHERE e.Date BETWEEN '2021/01/01' AND '2022/01/01' 
+			AND e.LessonId=1) 
+		AS b
+
+	ON a.ID = b.ID) AS x
+
+	WHERE Exams.StudentID=X.ID
+) AS y
+ORDER BY y.Score DESC)
+
+
+//////////////////////////
+CREATE TABLE Teachers
+(
+	ID INT PRIMARY KEY IDENTITY,
+	Name NVARCHAR(50) NOT NULL,
+	Age INT
+);
+
+CREATE TABLE Students
+(
+	ID INT PRIMARY KEY IDENTITY,
+	Name NVARCHAR(50) NOT NULL,
+	TeacherID INT
+);
+
+CREATE TABLE Lessons
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Name NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Exams
+(
+	ExamId INT PRIMARY KEY IDENTITY,
+	LessonId INT,
+	StudentID INT,
+	Date DATE,
+	Score INT
+);
+
+
+
+
+

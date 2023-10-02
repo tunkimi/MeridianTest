@@ -1,0 +1,15 @@
+D:\Projects\github\MeridianTest\MeridianTest\bin\Debug\net6.0\MeridianTest.exe
+D:\Projects\github\MeridianTest\MeridianTest\bin\Debug\net6.0\MeridianTest.deps.json
+D:\Projects\github\MeridianTest\MeridianTest\bin\Debug\net6.0\MeridianTest.runtimeconfig.json
+D:\Projects\github\MeridianTest\MeridianTest\bin\Debug\net6.0\MeridianTest.dll
+D:\Projects\github\MeridianTest\MeridianTest\bin\Debug\net6.0\MeridianTest.pdb
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.csproj.AssemblyReference.cache
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.AssemblyInfoInputs.cache
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.AssemblyInfo.cs
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.csproj.CoreCompileInputs.cache
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.dll
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\refint\MeridianTest.dll
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.pdb
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\MeridianTest.genruntimeconfig.cache
+D:\Projects\github\MeridianTest\MeridianTest\obj\Debug\net6.0\ref\MeridianTest.dll
